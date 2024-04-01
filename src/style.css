@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.figures .wrapper {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+}
+
+.figures .wrapper .boom {
+    width: 30vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 10;
+}
+
+.figures .wrapper .boom img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes boom {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .8;
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
+.figures .back {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+}
+
+.figures .back img {
+    object-fit: contain;
+    display: block;
+    width: 120%;
+    height: 100%;
+}
+
+.figures .left,
+.figures .right {
+    position: absolute;
+    transform-origin: bottom center;
+    height: 90vh;
+    width: 148vh;
+    bottom: 0;
+}
+
+.figures .left {
+    left: -17%;
+}
+
+.figures .right {
+    right: -22%;
+
+}
+
+@keyframes battleLeft {
+    0% {
+        left: -17%;
+    }
+
+    50% {
+        left: -12%;
+    }
+
+    100% {
+        left: -17%;
+    }
+}
+
+@keyframes battleRight {
+    0% {
+        right: -22%;
+    }
+
+    50% {
+        right: -12%;
+    }
+
+    100% {
+        right: -22%;
+    }
+}
+
+.figures .slogan {
+    position: relative;
+    z-index: 999;
+    text-align: center;
+}
+
+.figures .slogan img {
+    max-width: 40vw;
+    object-fit: cover;
+}
+
+.figures .btn {
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    z-index: 20;
+    text-align: center;
+}
+
+.figures .btn a {
+    display: inline-block;
+    max-width: 510px;
+    animation: btnAnimation 2s ease-in-out infinite;
+}
+
+.figures .btn img {
+    width: 100%;
+}
+
+@keyframes btnAnimation {
+    0% {
+        transform: scale(.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.9);
+    }
+}
+
+.figures .left .img,
+.figures .right .img {
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    height: 100%;
+    top: auto;
+}
+
+.figures .left img,
+.figures .right img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.figures .left .img:first-child {
+    left: 21px;
+
+}
+
+.figures .left .img:nth-child(2) {
+    left: 52px;
+
+}
+
+.figures .left .img:last-child {
+    left: 83px;
+}
+
+.figures .right .img:first-child {
+    right: 21px;
+
+}
+
+.figures .right .img:nth-child(2) {
+    right: 52px;
+
+}
+
+.figures .right .img:last-child {
+    right: 83px;
+}
+
+.header {
+    padding: 31px;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header .logo {
+    width: 384px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(3, 7, 9, 0.8);
+    font-family: Arial, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #ddb463;
+}
